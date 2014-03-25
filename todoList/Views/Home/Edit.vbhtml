@@ -3,7 +3,7 @@
     ViewData("Title") = "Edit"
 End Code
 
-<h2>Edit</h2>
+<h2>Edit <span class="glyphicon glyphicon-edit"></span></h2>
 
 @Using (Html.BeginForm())
     @Html.AntiForgeryToken()
@@ -23,9 +23,10 @@ End Code
         </div>
 
         <div class="form-group">
+
             @Html.LabelFor(Function(model) model.description, New With { .class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(Function(model) model.description)
+                @Html.TextAreaFor(Function(model) model.description, 5, 900, New With {.style = "border:solid red 1px;"})
                 @Html.ValidationMessageFor(Function(model) model.description)
             </div>
         </div>

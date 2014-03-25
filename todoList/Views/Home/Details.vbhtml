@@ -3,7 +3,7 @@
     ViewData("Title") = "Details"
 End Code
 
-<h2>Details</h2>
+<h2>Details <span class="glyphicon glyphicon-ok-sign"></h2>
 
 <div>
     <h4>todoitem</h4>

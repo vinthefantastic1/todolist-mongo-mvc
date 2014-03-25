@@ -10,42 +10,28 @@ End Code
 </p>
 <table class="table table-condensed">
     <tr>
+        <th></th>
         <th>
             @Html.DisplayNameFor(Function(model) model.description)
         </th>
         <th>
             @Html.DisplayNameFor(Function(model) model.completed)
         </th>
-        <th>
-            @Html.DisplayNameFor(Function(model) model.createdOn)
-        </th>
-        <th>
-            @Html.DisplayNameFor(Function(model) model.completedOn)
-        </th>
-        <th></th>
     </tr>
 
 @For Each item In Model
     @<tr>
-        <td>
-            @Html.DisplayFor(Function(modelItem) item.description)
+         <td>
+             <a href="@Url.Action("Edit",New With {.id = item.taskId})" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-edit"></span></a>
+             <a href="@Url.Action("Details", New With {.id = item.taskId})" class="btn btn-xs btn-warning"><span class="glyphicon glyphicon-ok-sign"></span></a>
+             <a href="@Url.Action("Delete", New With {.id = item.taskId})" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+         </td>
+
+        <td>    @Html.DisplayFor(Function(modelItem) item.description)
         </td>
         <td>
             @Html.DisplayFor(Function(modelItem) item.completed)
         </td>
-        <td>
-            @Html.DisplayFor(Function(modelItem) item.createdOn)
-        </td>
-        <td>
-            @Html.DisplayFor(Function(modelItem) item.completedOn)
-        </td>
-         <td>
-             <a href="@Url.Action("Edit",New With {.id = item.taskId})" class="btn btn-xs btn-primary">edit</a>
-             |
-             <a href="@Url.Action("Details", New With {.id = item.taskId})" class="btn btn-xs btn-warning">details</a>
-             |
-             <a href="@Url.Action("Delete", New With {.id = item.taskId})" class="btn btn-xs btn-danger">delete</a>
-         </td>
 
     </tr>
 Next

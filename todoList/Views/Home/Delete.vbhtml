@@ -3,9 +3,9 @@
     ViewData("Title") = "Delete"
 End Code
 
-<h2>Delete</h2>
+<h2>Delete <span class="glyphicon glyphicon-remove"></h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3 class="text-danger">Are you sure you want to delete this?</h3>
 <div>
     <h4>todoitem</h4>
     <hr />
