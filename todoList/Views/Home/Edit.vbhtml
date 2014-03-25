@@ -17,7 +17,7 @@ End Code
         <div class="form-group">
             @Html.LabelFor(Function(model) model.taskId, New With { .class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(Function(model) model.taskId)
+                @model.taskId
                 @Html.ValidationMessageFor(Function(model) model.taskId)
             </div>
         </div>
@@ -26,7 +26,7 @@ End Code
 
             @Html.LabelFor(Function(model) model.description, New With { .class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextAreaFor(Function(model) model.description, 5, 900, New With {.style = "border:solid red 1px;"})
+                @Html.TextAreaFor(Function(model) model.description, 5, 1000, New With {.class = "col-md-10"})
                 @Html.ValidationMessageFor(Function(model) model.description)
             </div>
         </div>
@@ -57,7 +57,7 @@ End Code
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </div>
     </div>
