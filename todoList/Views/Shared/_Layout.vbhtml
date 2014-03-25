@@ -20,7 +20,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="@Url.Action("about2")" data-toggle='modal' data-target='#myModal'>About</li>
+                    <li><a href="@Url.Action("about2")" data-toggle='modal' data-target='#myModal'>About</a></li>
                 </ul>
             </div>
         </div>
