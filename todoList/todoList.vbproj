@@ -127,7 +127,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -214,6 +213,7 @@
     <Content Include="Scripts\bootbox.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\todolist.pubxml" />
     <None Include="Scripts\jquery-2.1.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.0.js" />
     <Content Include="Scripts\jquery-2.1.0.min.js" />
@@ -229,7 +229,6 @@
     <Content Include="Views\Home\Edit.vbhtml" />
     <Content Include="Views\Home\Delete.vbhtml" />
     <Content Include="Views\Home\About.vbhtml" />
-    <Content Include="Views\Home\Partial1.vbhtml" />
     <Content Include="Views\Shared\_about2.vbhtml" />
   </ItemGroup>
   <ItemGroup>

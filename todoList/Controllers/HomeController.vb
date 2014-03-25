@@ -44,9 +44,7 @@ Public Class HomeController
  <ValidateAntiForgeryToken()>
     Function Create(<Bind(Include:="id,description,completed,createdOn,completedOn")> ByVal todoitem As todoitem) As ActionResult
         If ModelState.IsValid Then
-            '            Dim newTask As New todoitem
-
-            myColl.insert(todoitem)
+            myColl.Insert(todoitem)
             Return RedirectToAction("Index")
         End If
         Return View(todoitem)
@@ -116,7 +114,11 @@ Public Class HomeController
     <ValidateAntiForgeryToken()>
     Function Edit(<Bind(Include:="id,taskId,description,completed,createdOn,completedOn")> ByVal todoitem As todoitem) As ActionResult
 
-        '        myColl.Remove(Query.EQ("taskId", id))
+
+        ' this technically should work but for some reason it creates a new document instead of updating the old one.
+        'myColl.Save(todoitem)
+
+        ' so since we can't just "save" it, we have to do it the hard way...
 
         Dim query As New QueryDocument
         query.Set("taskId", todoitem.taskId)
@@ -130,7 +132,6 @@ Public Class HomeController
 
 
         myColl.Update(query, update)
-        'myColl.Save(todoitem)
 
         Return RedirectToAction("Index")
     End Function
