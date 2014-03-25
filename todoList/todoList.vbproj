@@ -211,6 +211,7 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <Content Include="Scripts\bootbox.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-2.1.0.intellisense.js" />
@@ -228,6 +229,8 @@
     <Content Include="Views\Home\Edit.vbhtml" />
     <Content Include="Views\Home\Delete.vbhtml" />
     <Content Include="Views\Home\About.vbhtml" />
+    <Content Include="Views\Home\Partial1.vbhtml" />
+    <Content Include="Views\Shared\_about2.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />

@@ -135,6 +135,9 @@ Public Class HomeController
         Return RedirectToAction("Index")
     End Function
 
+    Function about2() As ActionResult
+        Return PartialView("_about2")
+    End Function
 
 
     Function About() As ActionResult
