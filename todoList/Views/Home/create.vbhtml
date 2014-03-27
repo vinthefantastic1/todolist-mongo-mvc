@@ -15,7 +15,7 @@ End Code
         <div class="form-group">
             @Html.LabelFor(Function(model) model.description, New With { .class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextAreaFor(Function(model) model.description, 5, 900, New With {.style = "border:solid red 1px;"})
+                @Html.TextAreaFor(Function(model) model.description, 5, 100, New With {.class = "form-control"})
                 @Html.ValidationMessageFor(Function(model) model.description)
             </div>
         </div>
@@ -29,7 +29,7 @@ End Code
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(Function(model) model.createdOn, New With { .class = "control-label col-md-2" })
+            @Html.LabelFor(Function(model) model.createdOn, New With { .class = "control-label col-md-2", .style="dxisplay:none" })
             <div class="col-md-10">
                 @Html.EditorFor(Function(model) model.createdOn)
                 @Html.ValidationMessageFor(Function(model) model.createdOn)

@@ -5,9 +5,14 @@ End Code
 
 <h2>@ViewData("Title")</h2>
 
-<p>
-    <a href="@Url.Action("Create")" class="btn btn-primary">Create New</a>
-</p>
+<p></p>
+    <div class="row">
+        <div class="col-xs-8">
+            <a href="@Url.Action("Create")" class="btn btn-primary">Create New</a>
+            <textarea class="form-control"></textarea>
+        </div>
+        </div>
+
 <table class="table table-condensed">
     <tr>
         <th></th>
@@ -37,3 +42,5 @@ End Code
 Next
 
 </table>
+
+

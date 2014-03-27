@@ -21,7 +21,10 @@ Public Class HomeController
     Dim db As MongoDatabase = mongoServer.GetDatabase("todo2")
     Dim myColl As MongoCollection = db.GetCollection("todo2")
 
+    Function test() As ActionResult
+        Return View()
 
+    End Function
     Function Index() As ActionResult
 
         Dim tdl As MongoCollection(Of todoitem)

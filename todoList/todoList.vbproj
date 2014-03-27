@@ -230,6 +230,7 @@
     <Content Include="Views\Home\Delete.vbhtml" />
     <Content Include="Views\Home\About.vbhtml" />
     <Content Include="Views\Shared\_about2.vbhtml" />
+    <Content Include="Views\Home\test.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
