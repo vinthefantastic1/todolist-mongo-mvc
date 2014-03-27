@@ -26,7 +26,7 @@ End Code
 
             @Html.LabelFor(Function(model) model.description, New With { .class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextAreaFor(Function(model) model.description, 5, 1000, New With {.class = "col-md-10"})
+                @Html.TextAreaFor(Function(model) model.description, 5, 1000, New With {.class = "col-md-10 form-control"})
                 @Html.ValidationMessageFor(Function(model) model.description)
             </div>
         </div>
