@@ -16,8 +16,8 @@ Public Class todoitem
 
 
     Public Sub New()
-        '    id = ObjectId.GenerateNewId
-        '  taskId = id.ToString
+        id = ObjectId.GenerateNewId
+        taskId = id.ToString
     End Sub
 
 End Class
