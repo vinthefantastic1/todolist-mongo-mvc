@@ -15,7 +15,8 @@ Public Class HomeController
     Inherits System.Web.Mvc.Controller
 
 
-    Dim connectionString As String = "mongodb://localhost"
+    '    Dim connectionString As String = "mongodb://localhost"
+    Dim connectionString As String = "mongodb://192.168.1.10"
     Dim mongo As New MongoClient(connectionString)
     Dim mongoServer As MongoServer = mongo.GetServer
     Dim db As MongoDatabase = mongoServer.GetDatabase("todo2")
@@ -134,7 +135,8 @@ Public Class HomeController
         update.Set("taskId", todoitem.taskId)
 
 
-        myColl.Update(query, update)
+        Dim xx = myColl.Update(query, update)
+
 
         Return RedirectToAction("Index")
     End Function

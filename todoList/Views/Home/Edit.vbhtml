@@ -13,6 +13,8 @@ End Code
         <hr />
         @Html.ValidationSummary(true)
         @Html.HiddenFor(Function(model) model.id)
+         @Html.HiddenFor(Function(model) model.taskId)
+
 
         <div class="form-group">
             @Html.LabelFor(Function(model) model.taskId, New With { .class = "control-label col-md-2" })
