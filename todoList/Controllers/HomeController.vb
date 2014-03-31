@@ -15,8 +15,8 @@ Public Class HomeController
     Inherits System.Web.Mvc.Controller
 
 
-    Dim connectionString As String = "mongodb://localhost"
-    'Dim connectionString As String = "mongodb://192.168.1.10"
+    'Dim connectionString As String = "mongodb://localhost"
+    Dim connectionString As String = "mongodb://192.168.1.10"
     Dim mongo As New MongoClient(connectionString)
     Dim mongoServer As MongoServer = mongo.GetServer
     Dim db As MongoDatabase = mongoServer.GetDatabase("todo2")
