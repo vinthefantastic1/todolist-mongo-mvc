@@ -17,7 +17,7 @@ End Code
     <div class="row">
         <div class="col-xs-8">
             @Using Html.BeginForm("index", "home", FormMethod.Post, New With {.class = "form-inline"})
-                @<textarea id="newtask" name="newtask" class="form-control" cols="50"></textarea>
+                @Html.TextArea("newtask", New With {.class = "form-control", .cols = "50"})
                     @<button type="submit" class="btn btn-primary">Create task</button>
 
             End Using
@@ -42,7 +42,12 @@ End Code
              <a href="@Url.Action("Details", New With {.id = item.taskId})" class="btn btn-xs btn-warning"><span class="glyphicon glyphicon-ok-sign"></span></a>
          </td>
 
-        <td>    @Html.DisplayFor(Function(modelItem) item.description)
+        <td>@If item.completed = True Then
+            @<del>@Html.Raw(item.description)</del>
+        Else
+            @Html.Raw(item.description)
+        End If
+            
         </td>
         <td>
             @Html.DisplayFor(Function(modelItem) item.completed)
