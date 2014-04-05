@@ -7,15 +7,22 @@ End Code
 
 <div class="text-danger" id="error">@viewdata("error")</div>
 
+<style>
+    input:focus {
+        width: 350px;
+    }
+</style>
+
 <p></p>
     <div class="row">
         <div class="col-xs-8">
-            @Using (Html.BeginForm())
-                @<a href="@Url.Action("Create")" class="btn btn-primary">Create New</a>
-                @<textarea class="form-control"></textarea>
-            End Using
+            @Using Html.BeginForm("index", "home", FormMethod.Post, New With {.class = "form-inline"})
+                @<textarea id="newtask" name="newtask" class="form-control" cols="50"></textarea>
+                    @<button type="submit" class="btn btn-primary">Create task</button>
 
+            End Using
         </div>
+
         </div>
 
 <table class="table table-condensed">

@@ -26,10 +26,28 @@ Public Class HomeController
         Return View()
 
     End Function
-    Function Index() As ActionResult
+    Function Index(newtask As String) As ActionResult
 
         Dim tdl As MongoCollection(Of todoitem)
         tdl = db.GetCollection(Of todoitem)("todo2")
+
+
+        If Not IsNothing(newtask) Then
+            ' create a new task with all defaults.
+            Dim n As New todoitem
+            n.completed = False
+            n.description = newtask
+            n.createdOn = Now
+
+            If newtask <> "" Then
+                myColl.Insert(n)
+                Return RedirectToAction("index")
+
+            End If
+
+
+        End If
+
 
         Dim vw As New List(Of todoitem)
         Try
