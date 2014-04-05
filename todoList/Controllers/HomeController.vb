@@ -31,7 +31,13 @@ Public Class HomeController
         Dim tdl As MongoCollection(Of todoitem)
         tdl = db.GetCollection(Of todoitem)("todo2")
 
-        Dim vw = (From t In tdl Order By t.createdOn).ToList
+        Dim vw As New List(Of todoitem)
+        Try
+            vw = (From t In tdl Order By t.createdOn).ToList
+        Catch ex As Exception
+            ViewData("error") = ex.Message
+        End Try
+
 
         Return View(vw)
     End Function

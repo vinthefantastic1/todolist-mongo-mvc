@@ -5,11 +5,16 @@ End Code
 
 <h2>@ViewData("Title")</h2>
 
+<div class="text-danger" id="error">@viewdata("error")</div>
+
 <p></p>
     <div class="row">
         <div class="col-xs-8">
-            <a href="@Url.Action("Create")" class="btn btn-primary">Create New</a>
-            <textarea class="form-control"></textarea>
+            @Using (Html.BeginForm())
+                @<a href="@Url.Action("Create")" class="btn btn-primary">Create New</a>
+                @<textarea class="form-control"></textarea>
+            End Using
+
         </div>
         </div>
 
