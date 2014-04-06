@@ -140,6 +140,7 @@ Public Class HomeController
 
     <HttpPost()>
     <ValidateAntiForgeryToken()>
+    <ValidateInput(False)>
     Function Edit(<Bind(Include:="id,taskId,description,completed,createdOn,completedOn")> ByVal todoitem As todoitem) As ActionResult
 
 
