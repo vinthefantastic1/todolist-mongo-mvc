@@ -7,6 +7,13 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
+
+<style>
+
+    body {
+        padding-top: 65px;
+    }
+</style>
 <body>
     <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
